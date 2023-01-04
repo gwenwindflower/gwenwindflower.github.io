@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    background:#fff3f1;
+    color: #3b0aff;
+    font-family: monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 40rem;
+  }
