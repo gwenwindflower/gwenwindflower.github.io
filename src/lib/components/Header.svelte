@@ -3,7 +3,7 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="/reading">reading</a>
+				<a href="/books">books</a>
 			</li>
 			<li>
 				<a href="/blog">blog</a>

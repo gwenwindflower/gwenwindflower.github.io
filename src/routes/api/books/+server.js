@@ -5,7 +5,7 @@ export const GET = async () => {
 	const allBooks = await fetchBooks();
 
 	const sortedBooks = allBooks.sort((a, b) => {
-		return new Date(b.meta.updated_date) - new Date(a.meta.updated_date);
+		return new Date(b.meta.updatedAt) - new Date(a.meta.updatedAt);
 	});
 
 	return json(sortedBooks);
