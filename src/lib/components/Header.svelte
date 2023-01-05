@@ -1,18 +1,20 @@
 <header>
-	<a href="/">🏡</a>
 	<nav>
 		<ul>
 			<li>
-				<a href="/books">books</a>
+				<a href="/">🏡</a>
 			</li>
 			<li>
-				<a href="/blog">blog</a>
+				<a href="/books">📚</a>
 			</li>
 			<li>
-				<a href="/about">about</a>
+				<a href="/blog">📝</a>
 			</li>
 			<li>
-				<a href="/contact">contact</a>
+				<a href="/about">💁🏻‍♀️</a>
+			</li>
+			<li>
+				<a href="/contact">💌</a>
 			</li>
 		</ul>
 	</nav>
@@ -23,7 +25,7 @@
 		padding: 1rem;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: right;
 	}
 
 	ul {
@@ -36,5 +38,7 @@
 	a {
 		text-decoration: none;
 		color: inherit;
+		box-shadow: none;
+		text-shadow: none;
 	}
 </style>
