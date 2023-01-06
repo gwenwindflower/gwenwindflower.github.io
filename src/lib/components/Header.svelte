@@ -5,16 +5,16 @@
 				<a href="/">🏡</a>
 			</li>
 			<li>
-				<a href="/books">📚</a>
+				<a href="/books" aria-label="Books">📚</a>
 			</li>
 			<li>
-				<a href="/blog">📝</a>
+				<a href="/blog" aria-label="Blog">📝</a>
 			</li>
 			<li>
-				<a href="/about">💁🏻‍♀️</a>
+				<a href="/about" aria-label="About">💁🏻‍♀️</a>
 			</li>
 			<li>
-				<a href="/contact">💌</a>
+				<a href="/contact" aria-label="Contact">💌</a>
 			</li>
 		</ul>
 	</nav>

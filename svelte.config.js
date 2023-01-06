@@ -10,7 +10,7 @@ const config = {
 	extensions: ['.svelte', '.md'],
 
 	preprocess: [
-		sveltePreprocess(),
+		sveltePreprocess({ scss: { prependData: `@import 'src/lib/styles/style.scss';` } }),
 		mdsvex({
 			extensions: ['.md']
 		})
