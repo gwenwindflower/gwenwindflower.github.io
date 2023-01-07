@@ -22,26 +22,20 @@ concurrency:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        # TODO: Figure out how to remove this and just build with 19
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install --save-dev
-    - run: npm run build --if-present
+      - uses: actions/checkout@v3
+      - name: Use Node.js 19
+        uses: actions/setup-node@v3
+        with:
+          node-version: "19"
+          cache: "npm"
+      - run: npm install --save-dev
+      - run: npm run build --if-present
   # Single deploy job since we're just deploying
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -55,7 +49,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './build'
+          path: "./build"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
