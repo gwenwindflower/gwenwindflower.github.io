@@ -1,7 +1,7 @@
 ---
 name: Annalee Newitz
 demographics:
-  - 'LGBTQIA'
+  - 'LGBTQIA+'
 ---
 
-<p>cool writer</p>
+My current favorite writer!

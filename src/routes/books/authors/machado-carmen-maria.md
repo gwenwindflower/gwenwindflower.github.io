@@ -1,6 +1,9 @@
 ---
 name: Carmen Maria Machado
 demographics:
-  - 'LGBTQIA'
+  - 'LGBTQIA+'
   - 'Latine'
+  - 'Femme'
 ---
+
+Stuff about Carmen! She's so awesome!!

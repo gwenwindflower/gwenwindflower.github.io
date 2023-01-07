@@ -1,5 +1,5 @@
 ---
 name: Margaret Atwood
 demographics:
-  - 'canadian'
+  - 'Femme'
 ---

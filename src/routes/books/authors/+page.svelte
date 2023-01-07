@@ -2,7 +2,8 @@
 	export let data;
 </script>
 
-<h1>Authors write books cool yea?</h1>
+<h1>The people who write the books</h1>
+<h3>Sometimes I write notes on the them too.</h3>
 {#each data.authors as author}
 	<li><a href={author.path}>{author.meta.name}</a></li>
 {/each}
