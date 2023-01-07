@@ -1,15 +1,10 @@
-export const load = async ({ fetch, params }) => {
-	const { slug } = params;
-	const bookResponse = await fetch(`/api/books`);
-	const allBooks = await bookResponse.json();
-	const authorResponse = await fetch(`/api/authors`);
-	const allAuthors = await authorResponse.json();
-	const author = allAuthors.filter((author) => author.meta.slug == slug);
-	const authorBooks = allBooks.filter((book) => book.meta.author == author.meta.name);
+import { compute_rest_props } from 'svelte/internal';
 
+export const load = async ({ fetch }) => {
+	const response = await fetch(`/api/authors`);
+	const authors = await response.json();
+	console.log(authors);
 	return {
-		slug,
-		author,
-		authorBooks
+		authors
 	};
 };

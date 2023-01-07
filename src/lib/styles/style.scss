@@ -1,17 +1,16 @@
-// $white: #f9f7e8;
 $white: #fffff8;
 $black: #111111;
-$purple: #0000FF;  
-// $green: #62bfad;
-// $red: #FF8B8B;
-// $purple: #BFB5D7;
-$highlight: transparentize($purple, 0.7);
+$accent: #FF8B8B;
+$dark-accent: #9c2525;
+$serif: 'Fanwood Text', 'Georgia', serif;
+$sans: 'Work Sans', 'Helvetica', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Work+Sans:ital,wght@0,100;0,200;0,300;1,200;1,300&display=swap');
 
 body {
   margin: 0;
   background: $white;
   color: $black;
-  font-family: serif;
+  font-family: $serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,12 +24,12 @@ main {
 
 h1, h2, h3, h4 {
   font-style: italic;
-  font-family: sans-serif;
+  font-family: $sans;
 }
 
 h1 {
   font-size: 4rem;
-  color: $purple;
+  color: $accent;
 }
 
 h2 {
@@ -46,9 +45,6 @@ h4 {
 }
 
 a {
-  text-decoration: none;
-  box-shadow: inset 0 -1px 0 0 $highlight, inset 0 -0.3rem 0 0 $highlight;
-  &:visited {
-    color: inherit
-  }
+  text-decoration: underline dotted $black;
+  color: inherit;
 }

@@ -1,4 +1,4 @@
-<footer>copyright 2023</footer>
+<footer>©️ Gwen Windflower 2023</footer>
 
 <style lang="scss">
 	footer {

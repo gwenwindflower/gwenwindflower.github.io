@@ -22,59 +22,39 @@
 </script>
 
 <h1>These are all the books I've read</h1>
-<p>Feel free to filter by genre.</p>
-<div class="button-filter-set">
-	{#each genres as genre}
-		<button class:selected={selected[genre]} on:click={() => pickGenre(genre)}>{genre}</button>
-	{/each}
-</div>
-
+<p>Feel free to <a href="/books/authors">browse by author</a> or filter by genre:</p>
+{#each genres as genre}
+	<button class:selected={selected[genre]} on:click={() => pickGenre(genre)}>&nbsp;{genre}</button>
+{/each}
 <ul>
 	<!-- TODO: add genre filters to this list -->
 	{#each filteredBooks as book}
-		<li><a href={book.path}>{book.meta.title} by {book.meta.author}</a></li>
+		<li><a href={book.path}>{book.meta.title}</a> by {book.meta.author}</li>
 	{/each}
 </ul>
 
 <style lang="scss">
 	button {
-		font-family: monospace;
-		color: $purple;
+		font-size: 1rem;
+		font-family: 'Fanwood Text', 'Georgia', serif;
+		font-style: italic;
+		color: transparentize($black, 0.75);
 		background: transparent;
-		border: 1px $purple solid;
+		border: 0;
 		padding: 1rem;
-		border-right: 0;
-		&:first-of-type {
-			border-top-left-radius: 0.5rem;
-			border-bottom-left-radius: 0.5rem;
-		}
-		&:last-of-type {
-			border-top-right-radius: 0.5rem;
-			border-bottom-right-radius: 0.5rem;
-			border-right: 1px $purple solid;
-		}
-
+		margin: 0;
+		transition: 0.1s;
 		&:hover {
-			background-color: transparentize($purple, 0.8);
+			transition: 0.1s;
+			background-color: $accent;
 		}
 		&:active {
-			background-color: darken($purple, 10);
-			color: $white;
+			background-color: darken($accent, 7);
 		}
 	}
+
 	.selected {
-		background-color: $purple;
-		color: $white;
-		&:hover {
-			background-color: darken($purple, 4);
-		}
-		&:active {
-			background-color: darken($purple, 10);
-		}
-	}
-
-	.button-filter-set {
-		text-align: center;
+		color: $black;
 	}
 
 	ul {
@@ -85,5 +65,20 @@
 
 	li {
 		margin: 1rem 0;
+		font-style: italic;
+		a {
+			font-family: 'Fanwood Text', 'Georgia', serif;
+			font-style: normal;
+			text-decoration: none;
+			color: $black;
+			font-size: 1rem;
+			box-shadow: inset 0 -0.1rem 0 0 $accent;
+			text-decoration: none;
+			&:hover {
+				transition: 0.2s;
+				background-color: transparent;
+				box-shadow: inset 0 -0.1rem 0 0 $dark-accent;
+			}
+		}
 	}
 </style>

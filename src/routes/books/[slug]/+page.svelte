@@ -4,13 +4,28 @@
 
 <article>
 	<h1>{data.title}</h1>
-	<p><a href={data.authorLink}>Written by: {data.authorName}</a></p>
-	<p>Last updated: {data.updatedAt}</p>
-	<ul>
-		genres:
-		{#each data.genres as genre}
-			<li><a href="/books/genre/{genre}">{genre}</a></li>
-		{/each}
-	</ul>
+	<div class="metadata">
+		<p>Written by: <a href={data.authorLink}>{data.authorName}</a></p>
+		<p>Last updated: {data.updatedAt}</p>
+		<ul>
+			genres:
+			{#each data.genres as genre}
+				<li><a href="/books/genre/{genre}">{genre}</a></li>
+			{/each}
+		</ul>
+	</div>
 	<svelte:component this={data.content} />
 </article>
+
+<style lang="scss">
+	.metadata {
+		font-style: italic;
+		ul {
+			padding-left: 0;
+			list-style: disc;
+			li {
+				margin-left: 1rem;
+			}
+		}
+	}
+</style>

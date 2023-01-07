@@ -1,20 +1,21 @@
 <header>
+	<a class="home-link" href="/">Gwyneth 🌻 Windflower</a>
 	<nav>
 		<ul>
 			<li>
-				<a href="/">🏡</a>
+				📚 <a href="/books" aria-label="Books">reading</a>
 			</li>
+			<li>/</li>
 			<li>
-				<a href="/books" aria-label="Books">📚</a>
+				📝 <a href="/blog" aria-label="Blog">writing</a>
 			</li>
+			<li>/</li>
 			<li>
-				<a href="/blog" aria-label="Blog">📝</a>
+				💁🏻‍♀️ <a href="/about" aria-label="About">about</a>
 			</li>
+			<li>/</li>
 			<li>
-				<a href="/about" aria-label="About">💁🏻‍♀️</a>
-			</li>
-			<li>
-				<a href="/contact" aria-label="Contact">💌</a>
+				💌 <a href="/contact" aria-label="Contact">contact</a>
 			</li>
 		</ul>
 	</nav>
@@ -22,10 +23,24 @@
 
 <style lang="scss">
 	header {
+		font-size: 1.25rem;
 		padding: 1rem;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: right;
+		justify-content: space-between;
+	}
+
+	.home-link {
+		font-family: $sans;
+		color: $accent;
+		font-size: 1.5rem;
+		text-decoration: none;
+		&:hover {
+			transition: 0.2s;
+			background-color: transparent;
+			color: $white;
+			box-shadow: inset 0 -1.5rem 0 0 $accent;
+		}
 	}
 
 	ul {
@@ -36,9 +51,15 @@
 	}
 
 	a {
-		text-decoration: none;
+		font-family: $sans;
+		text-decoration: underline dotted $dark-accent;
 		color: inherit;
 		box-shadow: none;
 		text-shadow: none;
+		transition: 0.4s;
+		&:hover {
+			transition: 0.2s;
+			color: $accent;
+		}
 	}
 </style>

@@ -7,16 +7,17 @@
 	{#each data.posts as post}
 		<li>
 			<h2>
-				☆ <a href={post.path}>{post.meta.title}</a>
+				<a href={post.path}>{post.meta.title}</a>
 			</h2>
 			Published {post.meta.date}
 		</li>
 	{/each}
 </ul>
 
-<style>
+<style lang="scss">
 	ul {
 		list-style-type: none;
+		padding-left: 0;
 	}
 
 	a {
