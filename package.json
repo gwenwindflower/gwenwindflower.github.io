@@ -10,9 +10,11 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@observablehq/plot": "^0.6.1",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-static": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
+		"d3": "^7.8.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
