@@ -1,3 +1,3 @@
-<h1>Hi, I'm Winnie!</h1>
+<h1>About me</h1>
 
 <p>I'm a cute princess.</p>

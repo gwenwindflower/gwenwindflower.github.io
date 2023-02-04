@@ -1,10 +1,35 @@
+@font-face {
+  font-family: 'Basteleur Bold';
+  src: url('/src/lib/assets/Basteleur-Bold.woff');
+}
+
+@font-face {
+  font-family: 'Basteleur Moonlight';
+  src: url('/src/lib/assets/Basteleur-Moonlight.woff');
+}
+
+@font-face {
+  font-family: 'Honey Light';
+  src: url('/src/lib/assets/HoneyDemo-Light.otf');
+}
+
+@font-face {
+  font-family: 'Saint Regular';
+  src: url('/src/lib/assets/Saint-Regular.ttf');
+}
+
+
 $white: #fffff8;
 $black: #111111;
 $accent: #FF8B8B;
 $dark-accent: #9c2525;
 $serif: 'Fanwood Text', 'Georgia', serif;
 $sans: 'Work Sans', 'Helvetica', sans-serif;
+$display: 'Basteleur Moonlight';
+$display-bold: 'Basteleur Bold';
+$logo: 'Saint Regular';
 @import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Work+Sans:ital,wght@0,100;0,200;0,300;1,200;1,300&display=swap');
+
 
 body {
   margin: 0;
@@ -23,8 +48,7 @@ main {
 }
 
 h1, h2, h3, h4 {
-  font-style: italic;
-  font-family: $sans;
+  font-family: $display;
 }
 
 h1 {

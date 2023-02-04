@@ -3,19 +3,16 @@
 	<nav>
 		<ul>
 			<li>
-				📚 <a href="/books" aria-label="Books">reading</a>
+				<a href="/books" aria-label="Books">reading</a>
 			</li>
-			<li>/</li>
 			<li>
-				📝 <a href="/blog" aria-label="Blog">writing</a>
+				<a href="/blog" aria-label="Blog">writing</a>
 			</li>
-			<li>/</li>
 			<li>
-				💁🏻‍♀️ <a href="/about" aria-label="About">about</a>
+				<a href="/about" aria-label="About">about</a>
 			</li>
-			<li>/</li>
 			<li>
-				💌 <a href="/contact" aria-label="Contact">contact</a>
+				<a href="/contact" aria-label="Contact">contact</a>
 			</li>
 		</ul>
 	</nav>
@@ -31,7 +28,7 @@
 	}
 
 	.home-link {
-		font-family: $sans;
+		font-family: $display-bold;
 		color: $accent;
 		font-size: 1.5rem;
 		text-decoration: none;
@@ -39,7 +36,7 @@
 			transition: 0.2s;
 			background-color: transparent;
 			color: $white;
-			box-shadow: inset 0 -1.5rem 0 0 $accent;
+			box-shadow: inset 0 -2rem 0 0 $accent;
 		}
 	}
 
@@ -51,8 +48,8 @@
 	}
 
 	a {
-		font-family: $sans;
-		text-decoration: underline dotted $dark-accent;
+		font-family: $display;
+		text-decoration: none;
 		color: inherit;
 		box-shadow: none;
 		text-shadow: none;

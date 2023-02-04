@@ -21,7 +21,7 @@
 	import '$lib/styles/style.scss';
 </script>
 
-<h1>These are all the books I've read</h1>
+<h1>Book notes</h1>
 <p>Feel free to <a href="/books/authors">browse by author</a> or filter by genre:</p>
 {#each genres as genre}
 	<button class:selected={selected[genre]} on:click={() => pickGenre(genre)}>&nbsp;{genre}</button>
