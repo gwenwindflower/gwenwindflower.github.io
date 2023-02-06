@@ -56,7 +56,6 @@
 		transition: 0.4s;
 		&:hover {
 			transition: 0.2s;
-			color: $accent;
 		}
 	}
 </style>

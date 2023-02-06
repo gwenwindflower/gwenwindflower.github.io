@@ -36,8 +36,7 @@
 <style lang="scss">
 	button {
 		font-size: 1rem;
-		font-family: 'Fanwood Text', 'Georgia', serif;
-		font-style: italic;
+		font-family: $display;
 		color: transparentize($black, 0.75);
 		background: transparent;
 		border: 0;
@@ -67,17 +66,18 @@
 		margin: 1rem 0;
 		font-style: italic;
 		a {
-			font-family: 'Fanwood Text', 'Georgia', serif;
+			font-family: $display;
 			font-style: normal;
 			text-decoration: none;
 			color: $black;
 			font-size: 1rem;
-			box-shadow: inset 0 -0.1rem 0 0 $accent;
+			box-shadow: inset 0 -0.1rem 0 0 $dark-accent;
 			text-decoration: none;
 			&:hover {
-				transition: 0.2s;
+				transition: 0.1s;
 				background-color: transparent;
-				box-shadow: inset 0 -0.1rem 0 0 $dark-accent;
+				color: $accent;
+				box-shadow: inset 0 -1.2rem 0 0 $dark-accent;
 			}
 		}
 	}
