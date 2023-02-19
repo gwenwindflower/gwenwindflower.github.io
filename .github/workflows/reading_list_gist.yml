@@ -26,4 +26,4 @@ jobs:
           # Name of the file at the gist to write data at
           file_name: currently_reading.md
           # Content to write
-          content: cat actions/data.json
+          content: ${{ cat actions/data.json }}
