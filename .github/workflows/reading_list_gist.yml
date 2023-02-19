@@ -1,0 +1,28 @@
+name: Grab current reading list and write to gist
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch books
+        uses: boyeborg/fetch-url-action@v1.1
+        with:
+          url: https://gwenwindflower.com/api/books
+        
+      - name: Write to gist
+        uses: sergeysova/gist-write-action@v1.0.0
+        with:
+          # Gist ID
+          gist_id: d3396361369ebfb1235d6852320755aa
+          # Name of the file at the gist to write data at
+          file_name: currently_reading.md
+          # Content to write
+          content: ${{steps.fetch_books.output.content}}
