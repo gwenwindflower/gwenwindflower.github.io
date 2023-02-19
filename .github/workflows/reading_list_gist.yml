@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch books
-        uses: boyeborg/fetch-url-action@v1.1
+        uses: gautemo/fetch-api-data-action@1.1.0
         with:
           url: https://gwenwindflower.com/api/books
         
