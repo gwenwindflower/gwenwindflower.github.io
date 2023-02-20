@@ -21,7 +21,6 @@
 $white: #ffffff;
 $dove: #fffff8;
 $black: #111111;
-$accent: #ff8b8b;
 $dark-accent: #9c2525;
 $love: #ff90e8;
 $lemon: #f1f333;
@@ -30,6 +29,7 @@ $rose: #ea9a97;
 $foam: #9ccfd8;
 $pine: #3e8fb0;
 $iris: #c4a7e7;
+$accent: $iris;
 $serif: 'Fanwood Text', 'Georgia', serif;
 $sans: 'Work Sans', 'Helvetica', sans-serif;
 $display: 'Basteleur Moonlight';
@@ -39,7 +39,7 @@ $logo: 'Saint Regular';
 
 body {
 	margin: 0;
-	background-color: $dove;
+	background: $dove;
 	color: $black;
 	font-family: $serif;
 	font-size: 1rem;
@@ -49,12 +49,26 @@ body {
 }
 
 main {
-	padding: 1rem;
 	margin: 2rem auto;
 	max-width: 40rem;
+}
+
+.card {
+	padding: 1rem;
 	background-color: $white;
 	border: 1px solid $black;
-	box-shadow: 0.1rem 0.1rem 2rem transparentize($black, 0.9);
+	box-shadow: 0.1rem 0.1rem 1rem transparentize($black, 0.9);
+	transition: 0.1s;
+	&:hover {
+		box-shadow: 0.4rem 0.4rem $black;
+		transform: translate(-0.4rem, -0.4rem);
+		transition: 0.1s;
+	}
+	&:active {
+		box-shadow: 0.1rem 0.1rem 1rem transparentize($black, 0.9);
+		transform: translate(0rem, 0rem);
+		transition: 0.1s;
+	}
 }
 
 h1,

@@ -6,18 +6,23 @@
 <ul>
 	{#each data.posts as post}
 		<li>
-			<h2>
-				<a href={post.path}>{post.meta.title}</a>
-			</h2>
-			Published {post.meta.date}
-		</li>
-	{/each}
+			<div class="card">
+				<h2>
+					<a href={post.path}>{post.meta.title}</a>
+				</h2>
+				Published {post.meta.date}
+			</div>
+		</li>{/each}
 </ul>
 
 <style lang="scss">
 	ul {
 		list-style-type: none;
 		padding-left: 0;
+	}
+
+	li {
+		margin-bottom: 2rem;
 	}
 
 	a {
