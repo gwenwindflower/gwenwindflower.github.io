@@ -17,9 +17,11 @@ jobs:
         with:
           url: https://gwenwindflower.com/api/books
 
-      - name: Set value to variable
-        id: value
-        run: echo "::set-output name=books::$(cat actions/data.json)"
+      - name: Read package.json
+        id: read_books
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: actions/data.json
 
       - name: Write to gist
         uses: sergeysova/gist-write-action@v1.0.0
@@ -30,4 +32,4 @@ jobs:
           # Name of the file at the gist to write data at
           file_name: currently_reading.md
           # Content to write
-          content: ${{ steps.value.outputs.books }}
+          content: ${{ steps.read_books.outputs.content }}
