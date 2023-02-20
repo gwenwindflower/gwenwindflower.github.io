@@ -5,14 +5,13 @@
 <h1>My blog</h1>
 <ul>
 	{#each data.posts as post}
-		<li>
-			<div class="card">
-				<h2>
-					<a href={post.path}>{post.meta.title}</a>
-				</h2>
-				Published {post.meta.date}
-			</div>
-		</li>{/each}
+		<a href={post.path}>
+			<li class="card">
+				<h2>{post.meta.title}</h2>
+				<p>Published {post.meta.date}</p>
+			</li>
+		</a>
+	{/each}
 </ul>
 
 <style lang="scss">

@@ -13,15 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch books
-        uses: gautemo/fetch-api-data-action@1.1.0
-        with:
-          url: https://gwenwindflower.com/api/books
+        run: curl https://www.gwenwindflower.com/api/books | jq '.[].meta | select(.status | test("finished"))' >> actions/book_data.json
 
       - name: Read package.json
         id: read_books
         uses: juliangruber/read-file-action@v1
         with:
-          path: actions/data.json
+          path: actions/book_data.json
 
       - name: Write to gist
         uses: sergeysova/gist-write-action@v1.0.0

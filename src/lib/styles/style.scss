@@ -21,15 +21,10 @@
 $white: #ffffff;
 $dove: #fffff8;
 $black: #111111;
-$dark-accent: #9c2525;
 $love: #ff90e8;
 $lemon: #f1f333;
 $sky: #0088ff;
-$rose: #ea9a97;
-$foam: #9ccfd8;
-$pine: #3e8fb0;
-$iris: #c4a7e7;
-$accent: $iris;
+$accent: #c4a7e7;
 $serif: 'Fanwood Text', 'Georgia', serif;
 $sans: 'Work Sans', 'Helvetica', sans-serif;
 $display: 'Basteleur Moonlight';
@@ -39,9 +34,12 @@ $logo: 'Saint Regular';
 
 body {
 	margin: 0;
-	background: $dove;
+	background-color: $dove;
+	background-size: 3rem 3rem;
+	background-image: linear-gradient(to right, lavender 1px, transparent 1px),
+		linear-gradient(to bottom, lavender 1px, transparent 1px);
 	color: $black;
-	font-family: $serif;
+	font-family: $sans;
 	font-size: 1rem;
 	min-height: 100vh;
 	display: flex;
@@ -51,6 +49,23 @@ body {
 main {
 	margin: 2rem auto;
 	max-width: 40rem;
+}
+
+button {
+	padding: 1rem;
+	border: 1px black solid;
+	transition: 0.1s;
+	background-color: $love;
+	&:hover {
+		box-shadow: 0.1rem 0.1rem $black;
+		transform: translate(-0.1rem, -0.1rem);
+		transition: 0.1s;
+	}
+	&:active {
+		box-shadow: none;
+		transform: translate(0, 0);
+		transition: 0.1s;
+	}
 }
 
 .card {
@@ -71,11 +86,19 @@ main {
 	}
 }
 
+article {
+	padding: 1rem;
+	background-color: $white;
+	border: 1px solid $black;
+	min-width: 30rem;
+	box-shadow: 0.1rem 0.1rem 1rem transparentize($black, 0.9);
+}
+
 h1,
 h2,
 h3,
 h4 {
-	font-family: $display;
+	font-family: $display-bold;
 }
 
 h1 {
@@ -85,6 +108,7 @@ h1 {
 
 h2 {
 	font-size: 3rem;
+	color: $love;
 }
 
 h3 {
@@ -96,14 +120,12 @@ h4 {
 }
 
 a {
-	text-decoration: underline dotted $black;
+	text-decoration: none;
+	box-shadow: inset 0 -0.4rem 0 0 transparentize($love, 0.5);
 	color: inherit;
+	transition: 0.1s;
 	&:hover {
-		background-color: $accent;
-		color: $white;
-	}
-	&:active {
-		background-color: $dark-accent;
-		color: $accent;
+		box-shadow: inset 0 -1rem 0 0 transparentize($love, 0.5);
+		transition: 0.1s;
 	}
 }

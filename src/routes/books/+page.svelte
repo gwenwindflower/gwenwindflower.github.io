@@ -1,8 +1,6 @@
 <script>
-	import { text } from 'svelte/internal';
-
+	import Button from '../../lib/components/Button.svelte';
 	export let data;
-	// TODO: figure out a way to build this list from the markdown files
 	let selected = {
 		'sci-fi': true,
 		'short stories': true,
@@ -24,36 +22,17 @@
 <h1>Book notes</h1>
 <p>Feel free to <a href="/books/authors">browse by author</a> or filter by genre:</p>
 {#each genres as genre}
-	<button class:selected={selected[genre]} on:click={() => pickGenre(genre)}>&nbsp;{genre}</button>
+	<button on:click={() => pickGenre(genre)} class:selected={selected[genre]}>&nbsp;{genre}</button>
 {/each}
 <ul>
-	<!-- TODO: add genre filters to this list -->
 	{#each filteredBooks as book}
 		<li><a href={book.path}>{book.meta.title}</a> by {book.meta.author}</li>
 	{/each}
 </ul>
 
 <style lang="scss">
-	button {
-		font-size: 1rem;
-		font-family: $display;
-		color: transparentize($black, 0.75);
-		background: transparent;
-		border: 0;
-		padding: 1rem;
-		margin: 0;
-		transition: 0.1s;
-		&:hover {
-			transition: 0.1s;
-			background-color: $accent;
-		}
-		&:active {
-			background-color: darken($accent, 7);
-		}
-	}
-
 	.selected {
-		color: $black;
+		background-color: lightgray;
 	}
 
 	ul {
@@ -66,18 +45,16 @@
 		margin: 1rem 0;
 		font-style: italic;
 		a {
-			font-family: $display;
+			font-family: $sans;
 			font-style: normal;
 			text-decoration: none;
 			color: $black;
 			font-size: 1rem;
-			box-shadow: inset 0 -0.1rem 0 0 $dark-accent;
-			text-decoration: none;
+			box-shadow: inset 0 -0.4rem 0 0 transparentize(palegreen, 0.5);
+			transition: 0.1s;
 			&:hover {
+				box-shadow: inset 0 -1rem 0 0 transparentize(palegreen, 0.5);
 				transition: 0.1s;
-				background-color: transparent;
-				color: $accent;
-				box-shadow: inset 0 -1.2rem 0 0 $dark-accent;
 			}
 		}
 	}
