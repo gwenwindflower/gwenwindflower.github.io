@@ -8,17 +8,21 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
       - name: Fetch books
         run: python gist_update.py
-
       - name: Write to gist
         uses: sergeysova/gist-write-action@v1.0.0
         with:
-          github_token: ${{ secrets.GIST_UPDATER_TOKEN }}
           # Gist ID
           gist_id: d3396361369ebfb1235d6852320755aa
           # Name of the file at the gist to write data at
