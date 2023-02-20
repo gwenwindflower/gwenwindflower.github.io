@@ -12,6 +12,9 @@ permissions:
   contents: read
   id-token: write
 
+env:
+  GITHUB_TOKEN: ${{secrets.GIST_UPDATER_TOKEN}}
+
 jobs:
   update:
     runs-on: ubuntu-latest
