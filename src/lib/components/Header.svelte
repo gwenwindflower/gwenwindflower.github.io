@@ -1,18 +1,22 @@
+<script>
+	import Button from './Button.svelte';
+</script>
+
 <header>
-	<a class="home-link" href="/">Gwyneth 🌻 Windflower</a>
+	<a class="home-link" href="/">winnie</a>
 	<nav>
 		<ul>
 			<li>
-				<a href="/books" aria-label="Books">reading</a>
+				<a href="/books" aria-label="Books"><Button label="reading" color="lavender" /></a>
 			</li>
 			<li>
-				<a href="/blog" aria-label="Blog">writing</a>
+				<a href="/blog" aria-label="Blog"><Button label="writing" color="palegreen" /></a>
 			</li>
 			<li>
-				<a href="/about" aria-label="About">about</a>
+				<a href="/about" aria-label="About"><Button label="about" color="peachpuff" /></a>
 			</li>
 			<li>
-				<a href="/contact" aria-label="Contact">contact</a>
+				<a href="/contact" aria-label="Contact"><Button label="contact" color="lavenderblush" /></a>
 			</li>
 		</ul>
 	</nav>
@@ -29,14 +33,16 @@
 
 	.home-link {
 		font-family: $display-bold;
-		color: $accent;
-		font-size: 1.5rem;
+		color: lavender;
+		text-shadow: 0.1rem 0.1rem 0.1rem transparentize($black, 0.7);
+		font-size: 3.25rem;
 		text-decoration: none;
 		&:hover {
 			transition: 0.2s;
 			background-color: transparent;
-			color: $white;
-			box-shadow: inset 0 -2rem 0 0 $accent;
+			color: lavender;
+			// transform: translate(-0.25rem, -0.25rem);
+			text-shadow: 0.2rem 0.2rem transparentize($black, 0.4);
 		}
 	}
 
@@ -47,15 +53,15 @@
 		gap: 1rem;
 	}
 
-	a {
-		font-family: $display;
+	li a {
+		font-family: $sans;
 		text-decoration: none;
-		color: inherit;
+		color: $black;
 		box-shadow: none;
 		text-shadow: none;
-		transition: 0.4s;
-		&:hover {
-			transition: 0.2s;
+		&:hover,
+		&:active {
+			color: $black;
 		}
 	}
 </style>

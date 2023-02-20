@@ -1,28 +1,35 @@
 @font-face {
-  font-family: 'Basteleur Bold';
-  src: url('/src/lib/assets/Basteleur-Bold.woff');
+	font-family: 'Basteleur Bold';
+	src: url('/src/lib/assets/Basteleur-Bold.woff');
 }
 
 @font-face {
-  font-family: 'Basteleur Moonlight';
-  src: url('/src/lib/assets/Basteleur-Moonlight.woff');
+	font-family: 'Basteleur Moonlight';
+	src: url('/src/lib/assets/Basteleur-Moonlight.woff');
 }
 
 @font-face {
-  font-family: 'Honey Light';
-  src: url('/src/lib/assets/HoneyDemo-Light.otf');
+	font-family: 'Honey Light';
+	src: url('/src/lib/assets/HoneyDemo-Light.otf');
 }
 
 @font-face {
-  font-family: 'Saint Regular';
-  src: url('/src/lib/assets/Saint-Regular.ttf');
+	font-family: 'Saint Regular';
+	src: url('/src/lib/assets/Saint-Regular.ttf');
 }
 
-
-$white: #fffff8;
+$white: #ffffff;
+$dove: #fffff8;
 $black: #111111;
-$accent: #FF8B8B;
+$accent: #ff8b8b;
 $dark-accent: #9c2525;
+$love: #ff90e8;
+$lemon: #f1f333;
+$sky: #0088ff;
+$rose: #ea9a97;
+$foam: #9ccfd8;
+$pine: #3e8fb0;
+$iris: #c4a7e7;
 $serif: 'Fanwood Text', 'Georgia', serif;
 $sans: 'Work Sans', 'Helvetica', sans-serif;
 $display: 'Basteleur Moonlight';
@@ -30,54 +37,59 @@ $display-bold: 'Basteleur Bold';
 $logo: 'Saint Regular';
 @import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Work+Sans:ital,wght@0,100;0,200;0,300;1,200;1,300&display=swap');
 
-
 body {
-  margin: 0;
-  background: $white;
-  color: $black;
-  font-family: $serif;
-  font-size: 1rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-  
-main {
-  padding: 1rem;
-  margin: 2rem auto;
-  max-width: 40rem;
+	margin: 0;
+	background-color: $dove;
+	color: $black;
+	font-family: $serif;
+	font-size: 1rem;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
-h1, h2, h3, h4 {
-  font-family: $display;
+main {
+	padding: 1rem;
+	margin: 2rem auto;
+	max-width: 40rem;
+	background-color: $white;
+	border: 1px solid $black;
+	box-shadow: 0.1rem 0.1rem 2rem transparentize($black, 0.9);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $display;
 }
 
 h1 {
-  font-size: 4rem;
-  color: $accent;
+	font-size: 4rem;
+	color: $accent;
 }
 
 h2 {
-  font-size: 3rem;
+	font-size: 3rem;
 }
 
 h3 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 a {
-  text-decoration: underline dotted $black;
-  color: inherit;
-  &:hover {
-    background-color: $accent;
-    color: $white
-  }
-  &:active {
-    background-color: $dark-accent;
-    color: $accent;
-  }
+	text-decoration: underline dotted $black;
+	color: inherit;
+	&:hover {
+		background-color: $accent;
+		color: $white;
+	}
+	&:active {
+		background-color: $dark-accent;
+		color: $accent;
+	}
 }
