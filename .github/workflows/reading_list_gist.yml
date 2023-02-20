@@ -15,11 +15,14 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      current_reading: ${{ steps.fetch-books.outputs.books }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Fetch books
-        run: python gist_update.py
+        id: fetch-books
+        run: echo "books=hello" >> $GITHUB_OUTPUT
       - name: Write to gist
         uses: sergeysova/gist-write-action@v1.0.0
         with:
@@ -28,4 +31,4 @@ jobs:
           # Name of the file at the gist to write data at
           file_name: currently_reading.md
           # Content to write
-          content: ${{ steps.fetch_books.outputs.content }}
+          content: ${{ steps.fetch-books.outputs.books }}
