@@ -29,7 +29,7 @@
 			&:hover {
 				transition: 0.2s;
 				background-color: transparent;
-				box-shadow: inset 0 -0.1rem 0 0 $dark-accent;
+				box-shadow: inset 0 -1rem 0 0 $accent;
 			}
 		}
 	}
