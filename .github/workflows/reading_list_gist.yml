@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Fetch books
         id: fetch-books
-        run: echo "books=hello" >> $GITHUB_OUTPUT
+        run: echo "books=$(python gist_update.py)" >> $GITHUB_OUTPUT
       - name: Write to gist
         uses: sergeysova/gist-write-action@v1.0.0
         with:
