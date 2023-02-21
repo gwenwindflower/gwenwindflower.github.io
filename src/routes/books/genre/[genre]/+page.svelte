@@ -2,7 +2,7 @@
 	export let data;
 </script>
 
-<h1>hello these are the books i've read in the {data.genre} genre</h1>
+<h1>The {data.genre} books I've read</h1>
 
 <ul>
 	{#each data.books as book}

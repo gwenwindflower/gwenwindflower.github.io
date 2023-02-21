@@ -14,7 +14,9 @@
 			{/each}
 		</ul>
 	</div>
-	<svelte:component this={data.content} />
+	<div class="content">
+		<svelte:component this={data.content} />
+	</div>
 </article>
 
 <style lang="scss">

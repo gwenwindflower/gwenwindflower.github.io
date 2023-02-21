@@ -20,10 +20,14 @@
 </script>
 
 <h1>Book notes</h1>
+
 <p>Feel free to <a href="/books/authors">browse by author</a> or filter by genre:</p>
-{#each genres as genre}
-	<button on:click={() => pickGenre(genre)} class:selected={selected[genre]}>&nbsp;{genre}</button>
-{/each}
+<div class="button-container">
+	{#each genres as genre}
+		<button on:click={() => pickGenre(genre)} class:selected={selected[genre]}>&nbsp;{genre}</button
+		>
+	{/each}
+</div>
 <ul>
 	{#each filteredBooks as book}
 		<li><a href={book.path}>{book.meta.title}</a> by {book.meta.author}</li>
@@ -31,8 +35,13 @@
 </ul>
 
 <style lang="scss">
+	.button-container {
+		flex-wrap: wrap;
+		display: flex;
+		gap: 1rem;
+	}
 	.selected {
-		background-color: lightgray;
+		background-color: palegreen;
 	}
 
 	ul {
