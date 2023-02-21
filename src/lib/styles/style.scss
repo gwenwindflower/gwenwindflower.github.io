@@ -51,23 +51,6 @@ main {
 	max-width: 40rem;
 }
 
-button {
-	padding: 1rem;
-	border: 1px black solid;
-	transition: 0.1s;
-	background-color: $love;
-	&:hover {
-		box-shadow: 0.1rem 0.1rem $black;
-		transform: translate(-0.1rem, -0.1rem);
-		transition: 0.1s;
-	}
-	&:active {
-		box-shadow: none;
-		transform: translate(0, 0);
-		transition: 0.1s;
-	}
-}
-
 .card {
 	padding: 1rem;
 	background-color: $white;

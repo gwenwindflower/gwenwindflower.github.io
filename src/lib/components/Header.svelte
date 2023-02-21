@@ -3,9 +3,9 @@
 </script>
 
 <header>
-	<a class="home-link" aria-label="Home" href="/"
-		><Button label="Gwen Windflower" color="lavender" /></a
-	>
+	<a class="home-link" aria-label="Home" href="/">
+		<button>Gwen Windflower</button>
+	</a>
 	<nav>
 		<ul>
 			<li>
@@ -36,10 +36,27 @@
 	}
 
 	.home-link {
-		font-family: $display-bold;
-		color: $white;
-		text-shadow: 0 0 1px $black;
-		// text-shadow: 0.1rem 0.15rem 0.2rem transparentize($accent, 0.2);
+		button {
+			background-color: lavender;
+			font-family: $display-bold;
+			color: $white;
+			text-shadow: 1px 0px 3px transparentize($black, 0.5);
+			padding: 0.75rem;
+			font-size: 1.5rem;
+			box-shadow: 0.1rem 0.1rem 1rem transparentize($black, 0.9);
+			transition: 0.1s;
+			&:hover {
+				box-shadow: 0.25rem 0.25rem $black;
+				transform: translate(-0.25rem, -0.25rem);
+				transition: 0.1s;
+			}
+			&:active {
+				box-shadow: none;
+				transform: translate(0, 0);
+				transition: 0.1s;
+			}
+		}
+
 		text-decoration: none;
 		box-shadow: none;
 		&:hover {
