@@ -7,12 +7,12 @@
 	<ul>
 		<li>
 			<a rel="me" href="https://sunny.garden/@winnie">
-				<img src="/src/lib/assets/mastodon.svg" alt="Mastodon" />
+				<img src="mastodon.svg" alt="Mastodon" />
 			</a>
 		</li>
 		<li>
 			<a href="https://www.github.com">
-				<img src="/src/lib/assets/github.svg" alt="Github" />
+				<img src="github.svg" alt="Github" />
 			</a>
 		</li>
 	</ul>
