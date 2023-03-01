@@ -1,5 +1,5 @@
 <footer>
-	<p>️Made with 💗 by Gwen Windflower ©️ 2023</p>
+	<p>️Made with ♡ by Gwen Windflower ©️ 2023</p>
 </footer>
 
 <style lang="scss">
