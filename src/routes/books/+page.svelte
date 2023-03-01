@@ -41,7 +41,7 @@
 		gap: 1rem;
 	}
 	.selected {
-		background-color: palegreen;
+		background-color: $accent;
 	}
 
 	ul {
@@ -54,17 +54,9 @@
 		margin: 1rem 0;
 		font-style: italic;
 		a {
-			font-family: $sans;
+			font-family: $mono;
+			text-transform: uppercase;
 			font-style: normal;
-			text-decoration: none;
-			color: $black;
-			font-size: 1rem;
-			box-shadow: inset 0 -0.4rem 0 0 transparentize(palegreen, 0.5);
-			transition: 0.1s;
-			&:hover {
-				box-shadow: inset 0 -1rem 0 0 transparentize(palegreen, 0.5);
-				transition: 0.1s;
-			}
 		}
 	}
 </style>

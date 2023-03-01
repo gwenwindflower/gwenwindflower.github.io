@@ -18,28 +18,59 @@
 	src: url('/src/lib/assets/Saint-Regular.ttf');
 }
 
-$white: #ffffff;
-$dove: #fffff8;
-$black: #111111;
-$love: #ff90e8;
-$lemon: #f1f333;
-$sky: #0088ff;
-$accent: #c4a7e7;
+@font-face {
+	font-family: 'Satoshi-Variable';
+	src: url('/src/lib/assets/Satoshi-Variable.woff2') format('woff2'),
+		url('/src/lib/assets/Satoshi-Variable.woff') format('woff'),
+		url('/src/lib/assets/Satoshi-Variable.ttf') format('truetype');
+	font-weight: 300 900;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Satoshi-Black';
+	src: url('/src/lib/assets/Satoshi-Black.woff2') format('woff2'),
+		url('/src/lib/assets/Satoshi-Black.woff') format('woff'),
+		url('/src/lib/assets/Satoshi-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ellograph';
+	src: url('/src/lib/assets/EllographCF-Thin.otf');
+}
+
+@font-face {
+	font-family: 'Satoshi-Bold';
+	src: url('/src/lib/assets/Satoshi-Bold.woff2') format('woff2'),
+		url('/src/lib/assets/Satoshi-Bold.woff') format('woff'),
+		url('/src/lib/assets/Satoshi-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+
+$white: #fffff8;
+$black: #10100e;
+$accent: #c6ff00;
 $serif: 'Fanwood Text', 'Georgia', serif;
 $sans: 'Work Sans', 'Helvetica', sans-serif;
-$display: 'Basteleur Moonlight';
-$display-bold: 'Basteleur Bold';
-$logo: 'Saint Regular';
+$mono: 'Ellograph';
+$display: 'Satoshi-Variable';
+$display-bold: 'Satoshi-Black';
 @import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Work+Sans:ital,wght@0,100;0,200;0,300;1,200;1,300&display=swap');
 
 body {
 	margin: 0;
-	background-color: $dove;
-	background-size: 3rem 3rem;
-	background-image: linear-gradient(to right, lavender 1px, transparent 1px),
-		linear-gradient(to bottom, lavender 1px, transparent 1px);
+	background-color: $white;
+	// background-size: 3rem 3rem;
+	// background-image: linear-gradient(to right, lavender 1px, transparent 1px),
+	// linear-gradient(to bottom, lavender 1px, transparent 1px);
 	color: $black;
-	font-family: $sans;
+	font-family: $serif;
 	font-size: 1rem;
 	min-height: 100vh;
 	display: flex;
@@ -52,9 +83,11 @@ main {
 }
 
 button {
-	font-family: $sans;
+	font-family: $mono;
+	text-transform: uppercase;
 	font-size: 1rem;
 	padding: 1rem;
+	background-color: $white;
 	border: 1px black solid;
 	box-shadow: 0.1rem 0.1rem 1rem transparentize($black, 0.9);
 	transition: 0.1s;
@@ -72,9 +105,8 @@ button {
 
 .card {
 	padding: 1rem;
-	background-color: $white;
-	border: 1px solid $black;
 	width: 100%;
+	border: 1px solid $black;
 	box-shadow: 0.1rem 0.1rem 1rem transparentize($black, 0.9);
 	transition: 0.1s;
 	&:hover {
@@ -89,32 +121,22 @@ button {
 	}
 }
 
-article {
-	padding: 1rem;
-	background-color: $white;
-	border: 1px solid $black;
-	min-width: 30rem;
-	box-shadow: 0.1rem 0.1rem 1rem transparentize($black, 0.9);
-	.content {
-		font-family: $serif;
-	}
-}
-
 h1,
 h2,
 h3,
 h4 {
-	font-family: $display-bold;
+	font-family: $display;
+	// font-family: $mono;
+	// text-transform: uppercase;
+	// font-weight: 600;
 }
 
 h1 {
 	font-size: 4rem;
-	color: $accent;
 }
 
 h2 {
 	font-size: 3rem;
-	color: $love;
 }
 
 h3 {
@@ -127,11 +149,11 @@ h4 {
 
 a {
 	text-decoration: none;
-	box-shadow: inset 0 -0.4rem 0 0 transparentize($love, 0.5);
+	box-shadow: inset 0 -0.4rem 0 0 transparentize($accent, 0.5);
 	color: inherit;
 	transition: 0.1s;
 	&:hover {
-		box-shadow: inset 0 -1rem 0 0 transparentize($love, 0.5);
+		box-shadow: inset 0 -1rem 0 0 transparentize($accent, 0.5);
 		transition: 0.1s;
 	}
 }

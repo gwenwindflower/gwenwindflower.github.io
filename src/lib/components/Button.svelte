@@ -1,7 +1,7 @@
 <script>
-	export let label, color;
+	export let label;
 </script>
 
-<button style="background-color: {color};">
+<button>
 	{label}
 </button>

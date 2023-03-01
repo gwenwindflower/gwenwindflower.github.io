@@ -8,6 +8,6 @@
 		text-align: center;
 	}
 	p {
-		font-size: 0.5rem;
+		font-size: 1rem;
 	}
 </style>

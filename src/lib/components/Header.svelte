@@ -4,18 +4,15 @@
 
 <header>
 	<a class="home-link" aria-label="Home" href="/">
-		<button>Gwen Windflower</button>
+		Gwen Windflower/<span>artist+analyst</span>
 	</a>
 	<nav>
 		<ul>
 			<li>
-				<a href="/books" aria-label="Books"><Button label="reading 📚" color="lavenderblush" /></a>
+				<a href="/books" aria-label="Books"><Button label="✧ reading ✧" /></a>
 			</li>
 			<li>
-				<a href="/blog" aria-label="Blog"><Button label="writing 📝" color="palegreen" /></a>
-			</li>
-			<li>
-				<a href="/about" aria-label="About"><Button label="about 💁🏻‍♀️" color="peachpuff" /></a>
+				<a href="/blog" aria-label="Blog"><Button label="✦ writing ✦" /></a>
 			</li>
 		</ul>
 	</nav>
@@ -31,19 +28,24 @@
 	}
 
 	.home-link {
-		button {
-			background-color: lavender;
-			font-family: $display-bold;
-			color: $white;
-			text-shadow: 1px 0px 3px transparentize($black, 0.5);
-			padding: 0.75rem;
-			font-size: 1.5rem;
-		}
-
-		text-decoration: none;
-		box-shadow: none;
+		font-size: 2rem;
+		align-self: center;
+		font-family: $serif;
+		font-style: italic;
+		font-weight: 900;
+		box-shadow: inset 0 -1rem 0 0 transparentize($accent, 0.5);
+		color: inherit;
+		transition: 0.1s;
 		&:hover {
-			box-shadow: none;
+			box-shadow: inset 0 -2.2rem 0 0 transparentize($accent, 0.5);
+			transition: 0.1s;
+		}
+		span {
+			text-transform: uppercase;
+			font-family: $mono;
+			font-style: normal;
+			font-weight: 100;
+			font-size: 1rem;
 		}
 	}
 
@@ -55,7 +57,6 @@
 	}
 
 	li a {
-		font-family: $sans;
 		text-decoration: none;
 		color: $black;
 		box-shadow: none;

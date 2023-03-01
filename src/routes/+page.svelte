@@ -1,5 +1,4 @@
 <article>
-	<h1>Hi! I'm Winnie.</h1>
 	<p>
 		This is my blog. I primarily write about data and storytelling, and particularly keep notes on
 		my reading here.
@@ -37,7 +36,7 @@
 			height: 2rem;
 			width: 2rem;
 			&:hover {
-				background-color: transparentize(palegreen, $amount: 0.5);
+				background-color: transparentize($accent, $amount: 0.5);
 			}
 		}
 	}
