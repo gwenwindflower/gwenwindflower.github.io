@@ -21,7 +21,12 @@
 
 <style lang="scss">
 	.metadata {
-		font-style: italic;
+		font-family: $mono;
+		font-size: 0.8rem;
+		p {
+			font-size: 0.8rem;
+		}
+		text-transform: uppercase;
 		ul {
 			padding-left: 0;
 			list-style: disc;

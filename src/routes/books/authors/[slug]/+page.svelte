@@ -19,7 +19,8 @@
 	.demographics {
 		list-style-type: none;
 		padding-left: 0;
-		font-family: $sans;
+		font-family: $mono;
+		text-transform: uppercase;
 		li {
 			display: inline;
 			padding-right: 1rem;
@@ -31,5 +32,8 @@
 
 	.works {
 		padding-left: 0;
+		font-family: $mono;
+		font-size: 1rem;
+		text-transform: uppercase;
 	}
 </style>
