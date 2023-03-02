@@ -1,7 +1,17 @@
 <article>
+	<p>Hi there! I'm Gwen, but my friends call me Winnie. You can be my friend.</p>
 	<p>
-		This is my blog. I primarily write about data and storytelling, and particularly keep notes on
-		my reading here.
+		This is my tiny home on the internet. Here you'll find my notes on books I've read, am reading,
+		or want to read under, you guessed it, Reading. My blog, where I primarily write about data,
+		storytelling, note-taking, queerness, science fiction and fantasy, or all of the above, is
+		linked under Writing.
+	</p>
+	<p>
+		You can find me at other places on the internet below. If you'd like a glimpse inside my brain
+		at the working notes that I garden daily, check out my <a href="https://quartz.jzhao.xyz/"
+			>Quartz</a
+		>- + <a href="https://obsidian.md/">Obsidian</a>-powered
+		<a href="https://notes.gwenwindflower.com">knowledge graph</a>.
 	</p>
 	<ul>
 		<li>
