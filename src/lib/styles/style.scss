@@ -1,24 +1,4 @@
 @font-face {
-	font-family: 'Basteleur Bold';
-	src: url('/src/lib/assets/Basteleur-Bold.woff');
-}
-
-@font-face {
-	font-family: 'Basteleur Moonlight';
-	src: url('/src/lib/assets/Basteleur-Moonlight.woff');
-}
-
-@font-face {
-	font-family: 'Honey Light';
-	src: url('/src/lib/assets/HoneyDemo-Light.otf');
-}
-
-@font-face {
-	font-family: 'Saint Regular';
-	src: url('/src/lib/assets/Saint-Regular.ttf');
-}
-
-@font-face {
 	font-family: 'Satoshi-Variable';
 	src: url('/src/lib/assets/Satoshi-Variable.woff2') format('woff2'),
 		url('/src/lib/assets/Satoshi-Variable.woff') format('woff'),
@@ -29,28 +9,8 @@
 }
 
 @font-face {
-	font-family: 'Satoshi-Black';
-	src: url('/src/lib/assets/Satoshi-Black.woff2') format('woff2'),
-		url('/src/lib/assets/Satoshi-Black.woff') format('woff'),
-		url('/src/lib/assets/Satoshi-Black.ttf') format('truetype');
-	font-weight: 900;
-	font-display: swap;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'Ellograph';
 	src: url('/src/lib/assets/EllographCF-Thin.otf');
-}
-
-@font-face {
-	font-family: 'Satoshi-Bold';
-	src: url('/src/lib/assets/Satoshi-Bold.woff2') format('woff2'),
-		url('/src/lib/assets/Satoshi-Bold.woff') format('woff'),
-		url('/src/lib/assets/Satoshi-Bold.ttf') format('truetype');
-	font-weight: 700;
-	font-display: swap;
-	font-style: normal;
 }
 
 $white: #fffff8;
@@ -60,7 +20,6 @@ $serif: 'Fanwood Text', 'Georgia', serif;
 $sans: 'Work Sans', 'Helvetica', sans-serif;
 $mono: 'Ellograph';
 $display: 'Satoshi-Variable';
-$display-bold: 'Satoshi-Black';
 @import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Work+Sans:ital,wght@0,100;0,200;0,300;1,200;1,300&display=swap');
 
 body {

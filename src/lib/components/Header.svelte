@@ -1,5 +1,5 @@
 <script>
-	import Button from './Button.svelte';
+	import NavButton from './NavButton.svelte';
 </script>
 
 <header>
@@ -9,10 +9,10 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="/books" aria-label="Books"><Button label="✧ reading ✧" /></a>
+				<NavButton path="/books" label="reading" />
 			</li>
 			<li>
-				<a href="/blog" aria-label="Blog"><Button label="✦ writing ✦" /></a>
+				<NavButton path="/blog" label="writing" />
 			</li>
 		</ul>
 	</nav>
