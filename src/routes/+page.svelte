@@ -1,5 +1,7 @@
 <article>
-	<p>Hi there! I'm Gwen, but my friends call me Winnie. You can be my friend.</p>
+	<p>
+		Hi there! I'm Gwyneth Olivia Windflower, but my friends call me Winnie. You can be my friend.
+	</p>
 	<p>
 		This is my tiny home on the internet. Here you'll find my notes on books I've read, am reading,
 		or want to read under, you guessed it, Reading. My blog, where I primarily write about data,
