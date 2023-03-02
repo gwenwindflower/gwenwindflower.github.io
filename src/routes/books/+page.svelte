@@ -24,8 +24,7 @@
 <p>Feel free to <a href="/books/authors">browse by author</a> or filter by genre:</p>
 <div class="button-container">
 	{#each genres as genre}
-		<button on:click={() => pickGenre(genre)} class:selected={selected[genre]}>&nbsp;{genre}</button
-		>
+		<button on:click={() => pickGenre(genre)} class:selected={selected[genre]}>{genre}</button>
 	{/each}
 </div>
 <ul>
