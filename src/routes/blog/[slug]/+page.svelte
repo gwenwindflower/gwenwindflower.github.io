@@ -4,6 +4,14 @@
 
 <article>
 	<h1>{data.title}</h1>
-	<p>Published: {data.date}</p>
+	<p class="metadata">Published: {data.date}</p>
 	<svelte:component this={data.content} />
 </article>
+
+<style lang="scss">
+	.metadata {
+		font-family: $mono;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+	}
+</style>
