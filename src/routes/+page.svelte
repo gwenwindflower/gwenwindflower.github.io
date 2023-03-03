@@ -13,7 +13,7 @@
 		at the working notes that I garden daily, check out my <a href="https://quartz.jzhao.xyz/"
 			>Quartz</a
 		>- + <a href="https://obsidian.md/">Obsidian</a>-powered
-		<a href="https://notes.gwenwindflower.com">knowledge graph</a>.
+		<a href="https://embodied.computer">knowledge graph</a>.
 	</p>
 	<ul>
 		<li>
