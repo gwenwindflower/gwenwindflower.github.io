@@ -1,6 +1,6 @@
 export async function load({ params, fetch }) {
 	const book = await import(`../${params.slug}.md`);
-	const { title, author, updatedAt, genres } = book.metadata;
+	const { title, author, updatedAt, genres, status } = book.metadata;
 	const content = book.default;
 
 	const authorsResponse = await fetch(`/api/authors`);
@@ -19,6 +19,7 @@ export async function load({ params, fetch }) {
 		authorLink,
 		updatedAt,
 		genres,
+		status,
 		content
 	};
 }

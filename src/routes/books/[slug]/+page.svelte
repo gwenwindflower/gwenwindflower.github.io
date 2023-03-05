@@ -7,6 +7,7 @@
 	<div class="metadata">
 		<p>Written by: <a href={data.authorLink}>{data.authorName}</a></p>
 		<p>Last updated: {data.updatedAt}</p>
+		<p>Status: <a href="/books/status/{data.status}">{data.status}</a></p>
 		<ul>
 			genres:
 			{#each data.genres as genre}

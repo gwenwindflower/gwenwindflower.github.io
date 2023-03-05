@@ -5,7 +5,8 @@
 		'sci-fi': true,
 		'short stories': true,
 		horror: true,
-		modern: true
+		modern: true,
+		fantasy: true
 	};
 	const genres = Object.keys(selected);
 
