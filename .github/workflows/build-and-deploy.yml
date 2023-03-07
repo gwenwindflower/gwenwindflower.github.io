@@ -3,7 +3,7 @@ name: Build then deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -16,7 +16,7 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
@@ -28,17 +28,20 @@ jobs:
       - name: Use Node.js 19
         uses: actions/setup-node@v3
         with:
-          node-version: "19"
-          cache: "npm"
+          node-version: '19'
+          cache: 'npm'
       - run: npm install --save-dev
       - run: npm run build
+        env:
+          VITE_READWISE_TOKEN: ${{ secrets.VITE_READWISE_TOKEN }}
+
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload build dir
-          path: "./build"
+          path: './build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
