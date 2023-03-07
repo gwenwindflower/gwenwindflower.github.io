@@ -7,7 +7,6 @@ export async function load({ params, fetch }) {
 	});
 	const parsedResponse = await response.json();
 	const highlights = parsedResponse.results[0];
-	console.log(highlights);
 	return {
 		highlights
 	};
