@@ -35,7 +35,7 @@ jobs:
           touch .env
           echo READWISE_TOKEN="$TOKEN" >> .env
         env:
-          TOKEN: ${{READWISE_TOKEN}}
+          TOKEN: ${{secrets.READWISE_TOKEN}}
       - run: npm install --save-dev
       - run: npm run build
       - name: Setup Pages
