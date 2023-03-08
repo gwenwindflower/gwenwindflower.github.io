@@ -33,7 +33,7 @@ jobs:
       - run: npm install --save-dev
       - run: npm run build
         env:
-          VITE_READWISE_TOKEN: ${{ secrets.VITE_READWISE_TOKEN }}
+          READWISE_TOKEN: ${{ secrets.VITE_READWISE_TOKEN }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
