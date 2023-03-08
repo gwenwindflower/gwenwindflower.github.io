@@ -6,6 +6,7 @@ if (process.env.READWISE_TOKEN) {
 	console.log('poooooooop');
 } else {
 	myKey = READWISE_TOKEN;
+	console.log('peepee');
 }
 
 export async function load({ params, fetch }) {
