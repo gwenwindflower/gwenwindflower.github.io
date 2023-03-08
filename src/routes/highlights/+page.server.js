@@ -7,7 +7,7 @@ if (process.env.READWISE_TOKEN) {
 } else {
 	myKey = READWISE_TOKEN;
 	console.log('peepee');
-
+}
 
 export async function load({ fetch }) {
 	const response = await fetch(`https://readwise.io/api/v2/export/`, {
