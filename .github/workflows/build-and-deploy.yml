@@ -30,10 +30,10 @@ jobs:
         with:
           node-version: '19'
           cache: 'npm'
+      - run: npm install --save-dev
+      - run: READWISE_TOKEN=$READWISE_TOKEN npm run build
         env:
           READWISE_TOKEN: ${{ secrets.READWISE_TOKEN }}
-      - run: npm install --save-dev
-      - run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
