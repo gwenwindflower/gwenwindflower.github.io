@@ -22,7 +22,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://www.github.com">
+			<a href="https://www.github.com/gwenwindflower">
 				<img src="github.svg" alt="Github" />
 			</a>
 		</li>
