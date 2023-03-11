@@ -8,6 +8,7 @@
 	<svelte:component this={data.content} />
 </article>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	.metadata {
 		font-family: $mono;

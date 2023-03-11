@@ -12,6 +12,7 @@
 	{/each}
 </ul>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	ul li {
 		font-style: italic;

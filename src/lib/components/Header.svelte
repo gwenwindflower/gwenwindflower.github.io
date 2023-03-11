@@ -18,6 +18,7 @@
 	</nav>
 </header>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	header {
 		font-size: 1.25rem;
