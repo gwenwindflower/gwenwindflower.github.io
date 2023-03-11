@@ -9,6 +9,7 @@
 	</button>
 </a>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	.selected {
 		&::before {

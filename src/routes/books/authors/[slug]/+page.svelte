@@ -15,6 +15,7 @@
 	{/each}
 </ul>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	.demographics {
 		list-style-type: none;

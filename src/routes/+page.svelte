@@ -29,6 +29,7 @@
 	</ul>
 </article>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	ul {
 		padding: 0;

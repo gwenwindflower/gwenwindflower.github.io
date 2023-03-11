@@ -36,6 +36,7 @@
 	{/each}
 </ul>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	.button-container {
 		flex-wrap: wrap;

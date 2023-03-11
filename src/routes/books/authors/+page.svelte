@@ -8,6 +8,7 @@
 	<li><a href={author.path}>{author.meta.name}</a></li>
 {/each}
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	ul {
 		padding: 0;

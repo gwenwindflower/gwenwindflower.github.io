@@ -8,6 +8,7 @@
 	<li><em>From page {highlight.location}</em>: {highlight.text}</li>
 {/each}
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	li em {
 		font-family: $mono;
